@@ -2,7 +2,6 @@
 
 Documentation    Arquivo de mapeamento do projeto
 
-
 ##Libraries utilizadas no projeto Web
 Library        SeleniumLibrary
 Library        FakerLibrary        locale=pt_BR
@@ -22,5 +21,5 @@ Resource    ../Methods/methods.robot
 Resource    ../Pages/Page_Object.robot
 
 #Data
-Resource    ../Data/data_credentials.yaml
+Variables    ../Data/data_credentials.yaml
 

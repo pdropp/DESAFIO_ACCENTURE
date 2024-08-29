@@ -1,14 +1,13 @@
 *** Settings ***
 
-Documentation        Arquivo de Setup e Teardown da automação WEB. Responsavel pelo que acontece antes e depois dos testes.
+Documentation        Arquivo de configuração do browser
 
 Resource   package.robot
-
 
 *** Keywords ***
 
 Open Session
-    Open Browser    about:blank    ${BROWSER.NAME}   options=add_experimental_option("excludeSwitches", ["enable-logging"]); add_argument("--window-size=1920,1080"); add_experimental_option("detach", True) 
+    Open Browser    about:blank   ${BROWSER.NAME}   options=add_experimental_option("excludeSwitches", ["enable-logging"]); add_argument("--window-size=1920,1080"); add_experimental_option("detach", True) 
     Go To    ${BROWSER.URL}
     Set Selenium Timeout    30
     Maximize Browser Window
