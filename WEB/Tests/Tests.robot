@@ -9,5 +9,7 @@ Test Setup          Open Session
 
 
 *** Test Cases ***
-Scenario: Desafio 1 Accenture
-    Given Desafio_1_Accenture
+Scenario: Desafio Web 1 Accenture
+    [Tags]    DESAFIO01
+    Given Escolher a opcao FORMS na pagina inicial, clicar no Submenu Pratice Form
+    And Preencher todo formulario com valores aleatorios
