@@ -3,6 +3,7 @@ Documentation       Cenários automatizados sprint 1 Lista de verificação
 
 Resource            ../Config/package.robot
 Test Setup          Open Session
+Test Teardown       Close Browser
 
 
 
