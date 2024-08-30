@@ -16,10 +16,12 @@ Library        ../Logs/Method_Upload_File.py
 Resource    config.robot
 
 #Métodos cenários
-Resource    ../Functions/Functions_Desafio_PreencherForm.robot
+Resource    ../Methods/Methods_Desafio_NovaTela.robot
+Resource    ../Methods/Methods_Desafio_PreencherForm.robot
 
 #Pages
-Resource    ../Pages/Page_Object.robot
+Resource    ../Pages/Page_Object_desafio1.robot
+Resource    ../Pages/Page_Object_desafio2.robot
 
 #Data
 Variables    ../Data/data_credentials.yaml
