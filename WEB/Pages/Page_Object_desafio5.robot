@@ -8,4 +8,5 @@ ${CARD_INTERACTIONS}                             xpath=//div[@class='category-ca
 ${SORTABLE_OP}                                   xpath=//ul[@class='menu-list']//li//span[contains(text(),'Sortable')]
 
 #Itens para fazer o drag drop
+${LABEL_SORTABLE}                                xpath=//h1[text()='Sortable']
 ${ITENS_LIST}                                    xpath=//div[@id='demo-tabpane-list']//div[@class='list-group-item list-group-item-action']

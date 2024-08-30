@@ -13,10 +13,20 @@ Escolher a opção Interactions na página inicial
 Clicar no submenu Sortable
     Wait Until Element Is Enabled        ${SORTABLE_OP}               timeout=30s
     Click Element                        ${SORTABLE_OP}
+    Sleep    time_=10.0
+    scrollToElement                      ${LABEL_SORTABLE}
+    Sleep    time_=10.0
 
 Utilizando métodos de drag and drop, colocar os elementos na ordem crescente
-
-    ${items}=    Get WebElements       ${ITENS_LIST}
-    FOR    ${index}    IN RANGE    ${items.__len__}
-        Drag And Drop    ${items}[${index}]    ${items}[${index}+1]
+    ${ITENS}=    Get WebElements    ${ITENS_LIST}
+    # Ordenar os elementos usando Insertion Sort
+    FOR    ${i}    IN RANGE    1    ${ITENS.__len__()}
+        ${elemento_atual}=    Get From List    ${ITENS}    ${i}
+        ${j}=    Evaluate    ${i} - 1
+        WHILE  ${j} >= 0
+            ${elemento_j_text}=    Get Text    ${ITENS}[${j}]
+            Drag And Drop    ${elemento_atual}    ${ITENS}[${j}]
+            ${j}=    Evaluate    ${j} - 2
+        END
+            
     END

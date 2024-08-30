@@ -12,6 +12,8 @@ Library        DateTime
 Library        ScreenCapLibrary
 Library        OperatingSystem
 Library        ../Logs/Method_Upload_File.py
+Library    Collections
+Library    OperatingSystem
 #Hooks
 Resource    config.robot    # robotcode: ignore
 
