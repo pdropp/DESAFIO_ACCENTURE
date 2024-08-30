@@ -10,8 +10,10 @@ ${PROGRESS_BAR_OPTIONS}                     xpath=//ul[@class='menu-list']//li//
 
 
 #Page objects clicar no botão start
+
+${LABEL_RPOGRESSBAR}                        xpath=//h1[text()='Progress Bar']
 ${BUTTON_START}                             xpath=//button[text()='Start']
-${PROGRESS_BAR}                             xpath=//div[@class='progress']//div[text()='23%']
+${PROGRESS_BAR}                             xpath=//div[@class='progress']//div[@aria-valuenow='23']
 ${BUTTON_STOP}                              xpath=//button[text()='Stop']
-${PROGRESS_BAR_FULL}                        xpath=//div[@class='progress']//div[text()='100%']
+${PROGRESS_BAR_FULL}                        xpath=//div[@class='progress']//div[@aria-valuenow='100']
 ${BUTTON_RESET}                              xpath=//button[text()='Reset']

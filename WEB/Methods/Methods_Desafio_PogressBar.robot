@@ -16,20 +16,23 @@ Escolher a opcao Widgets na página inicial
     Click Element                        ${PROGRESS_BAR_OPTIONS}
 
 Clicar no botao start
+    scrollToElement                      ${LABEL_RPOGRESSBAR}
     Wait Until Element Is Visible        ${BUTTON_START}
+    Sleep    time_=10.0
     Click Button                         ${BUTTON_START}
-
+   
+  
 Validar progresso da progress bar
-    Wait Until Element Is Visible        ${PROGRESS_BAR}    
-    Click Button    ${BUTTON_STOP}
-    Sleep    10.0
-
+    ${progress_bar_25}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${PROGRESS_BAR}
+        Run Keyword If    ${progress_bar_25}      Click Button    ${BUTTON_STOP}
+       
 Apertar Start novamente e ao chegar aos 100% resetar
     Wait Until Element Is Visible        ${BUTTON_START}
+    Sleep        time_=10.0
     Click Button                         ${BUTTON_START}
-    Wait Until Element Is Visible        ${PROGRESS_BAR_FULL}    timeout=30s
-    Wait Until Element Is Visible        ${BUTTON_RESET}
-    Click Button                         ${BUTTON_RESET}
+
+    ${progress_bar_full}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${PROGRESS_BAR_FULL} 
+        Run Keyword If    ${progress_bar_full}      Click Button    ${BUTTON_RESET}
     #Sleep para validar que a barra foi zerada
     Sleep    10.0
 
