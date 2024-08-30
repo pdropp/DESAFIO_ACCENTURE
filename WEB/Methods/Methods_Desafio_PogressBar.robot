@@ -23,7 +23,8 @@ Clicar no botao start
    
   
 Validar progresso da progress bar
-    ${progress_bar_25}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${PROGRESS_BAR}
+    ${progress_bar_25}=    Run Keyword And Return Status    
+    ...    Wait Until Element Is Visible    ${PROGRESS_BAR}   timeout=05.0
         Run Keyword If    ${progress_bar_25}      Click Button    ${BUTTON_STOP}
        
 Apertar Start novamente e ao chegar aos 100% resetar
