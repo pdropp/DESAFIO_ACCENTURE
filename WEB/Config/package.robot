@@ -13,7 +13,7 @@ Library        ScreenCapLibrary
 Library        OperatingSystem
 Library        ../Logs/Method_Upload_File.py
 #Hooks
-Resource    config.robot
+Resource    config.robot    # robotcode: ignore
 
 #Métodos cenários
 Resource    ../Methods/Methods_Desafio_NovaTela.robot
