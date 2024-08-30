@@ -1,0 +1,7 @@
+robotframework==7.0.1
+robotframework-seleniumlibrary==6.5.0
+robotframework-debuglibrary==2.5.0
+robotframework-faker==5.0.0
+pyyaml==24.7.0
+robotframework-screencaplibrary==1.6.0
+
