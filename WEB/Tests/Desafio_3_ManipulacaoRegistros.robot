@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Desafio 2 - validar mensagem nova tela
+Documentation       Desafio 3 - validar criacao, edicao e delete registro
 
 Resource            ../Config/package.robot
 Test Setup          Open Session
