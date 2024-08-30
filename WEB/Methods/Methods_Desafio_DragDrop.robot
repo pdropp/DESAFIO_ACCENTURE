@@ -19,14 +19,13 @@ Clicar no submenu Sortable
 
 Utilizando métodos de drag and drop, colocar os elementos na ordem crescente
     ${ITENS}=    Get WebElements    ${ITENS_LIST}
-    # Ordenar os elementos usando Insertion Sort
-    FOR    ${i}    IN RANGE    1    ${ITENS.__len__()}
-        ${elemento_atual}=    Get From List    ${ITENS}    ${i}
-        ${j}=    Evaluate    ${i} - 1
-        WHILE  ${j} >= 0
-            ${elemento_j_text}=    Get Text    ${ITENS}[${j}]
-            Drag And Drop    ${elemento_atual}    ${ITENS}[${j}]
-            ${j}=    Evaluate    ${j} - 2
+    FOR    ${i_RANGE}    IN RANGE    1    ${ITENS.__len__()}
+        ${elemento_atual}=    Get From List    ${ITENS}    ${i_RANGE}
+        ${J_RANGE}=    Evaluate    ${i_RANGE} - 1
+        WHILE  ${J_RANGE} >= 0
+            ${elemento_j_text}=    Get Text    ${ITENS}[${J_RANGE}]
+            Drag And Drop    ${elemento_atual}    ${ITENS}[${J_RANGE}]
+            ${J_RANGE}=    Evaluate    ${J_RANGE} - 2
         END
             
     END
