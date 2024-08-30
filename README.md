@@ -40,3 +40,4 @@ $ pip install -r requirements.txt
 ```
 
 #	Automação API
+Para a automação API foi utilizado apenas rest assured e o testrng
