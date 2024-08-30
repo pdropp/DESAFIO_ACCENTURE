@@ -18,11 +18,12 @@ Resource    config.robot    # robotcode: ignore
 #Métodos cenários
 Resource    ../Methods/Methods_Desafio_NovaTela.robot
 Resource    ../Methods/Methods_Desafio_PreencherForm.robot
+Resource    ../Methods/Methods_Desafio_WebTables.robot
 
 #Pages
 Resource    ../Pages/Page_Object_desafio1.robot
 Resource    ../Pages/Page_Object_desafio2.robot
-
+Resource    ../Pages/Page_Object_desafio3.robot
 #Data
 Variables    ../Data/data_credentials.yaml
 
